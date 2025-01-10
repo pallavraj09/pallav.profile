@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Main Page</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="header-container">
+        <h1 class="main-title">Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="welcome.html">Home Page</a></li>
+                <li><a href="#about-container">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Timeline Section -->
+<section id="timeline" class="timeline-section">
+    <h2>My Journey</h2>
+    <div class="timeline-container">
+        <div class="timeline-line"></div>
+        <div class="timeline-event" id="born">
+            <div class="timeline-year" onclick="toggleDetails('born-details')">1999</div>
+            <div id="born-details" class="timeline-content">
+                <h3>Born</h3>
+                <p>I was born in 1999, and this marked the start of my incredible journey in life.</p>
+                <img src="pics/pic1.jpg" alt="Born in 1999" class="timeline-img">
+            </div>
+        </div>
+        <div class="timeline-event" id="schooling">
+            <div class="timeline-year" onclick="toggleDetails('schooling-details')">2015</div>
+            <div id="schooling-details" class="timeline-content">
+                <h3>Schooling</h3>
+                <p>Graduated from school in 2015, where I gained the foundation for my academic future.</p>
+                <img src="pics/pic2.jpg" alt="School Graduation" class="timeline-img">
+            </div>
+        </div>
+        <div class="timeline-event" id="graduation">
+            <div class="timeline-year" onclick="toggleDetails('graduation-details')">2023</div>
+            <div id="graduation-details" class="timeline-content">
+                <h3>Graduation</h3>
+                <p>Completed my graduation in 2023, a significant achievement in my academic journey.</p>
+                <img src="pics/pic3.jpg" alt="Graduation" class="timeline-img">
+            </div>
+        </div>
+        <div class="timeline-event" id="working">
+            <div class="timeline-year" onclick="toggleDetails('working-details')">2024</div>
+            <div id="working-details" class="timeline-content">
+                <h3>Working</h3>
+                <p>Currently working as a software developer, creating real-world projects and learning continuously.</p>
+                <img src="pics/pic4.jpg" alt="Working" class="timeline-img">
+            </div>
+        </div>
+    </div>
+</section>
+<div class="about-container" section id ="about-container">
+    <div class="about-header">
+        <h2>About Me</h2>
+        <p>Learn more about my journey and experience</p>
+    </div>
+    <div class="about-content">
+        <div class="about-column">
+            <h3>My Journey</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            <ul class="about-pointers">
+                <li>Started as a software developer</li>
+                <li>Worked in various challenging projects</li>
+                <li>Passionate about technology and innovation</li>
+            </ul>
+        </div>
+        <div class="about-column">
+            <h3>My Skills</h3>
+            <p>Proficient in Java, React Native, and other web technologies. Always open to learning new skills and technologies.</p>
+            <ul class="about-pointers">
+                <li>Strong coding skills</li>
+                <li>Leadership and teamwork abilities</li>
+                <li>Experienced in project management</li>
+            </ul>
+        </div>
+    </div></section>
+</div>
+
+ <!-- Services Section -->
+ <section id="services">
+    <h2>Services</h2>
+    <ul>
+        <li>App Development</li>
+        <li>Web Development</li>
+        <li>UI/UX Design</li>
+        <li>Consulting</li>
+    </ul>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-items">
+        <div class="portfolio-item">
+            <img src="pics/project1.jpg" alt="Project 1">
+            <p>Project 1 Description</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="pics/project2.jpg" alt="Project 2">
+            <p>Project 2 Description</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form" action="https://formspree.io/f/mldellnp" method="POST">
+        <!-- Step 1: Name and Email -->
+        <div id="step1">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+
+            <button type="button" onclick="nextStep(1)">Next</button>
+        </div>
+
+        <!-- Step 2: Message -->
+        <div id="step2" class="hidden">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+            <button type="button" onclick="previousStep(2)">Back</button>
+            <button type="button" onclick="nextStep(2)">Next</button>
+        </div>
+
+        <!-- Step 3: Social Handles (Optional) -->
+        <div id="step3" class="hidden">
+            <label for="handles">Social Handles (Optional)</label>
+            <textarea id="handles" name="handles" rows="3" placeholder="Your Social Media Handles"></textarea>
+
+            <button type="button" onclick="previousStep(3)">Back</button>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</section>
+
+
+<footer>
+    <p>Follow me on: <a href="https://www.linkedin.com/in/pallavvraj/">LinkedIn</a> | <a href="https://www.instagram.com/pallavv__/profilecard/?igsh=enJmY2c1dWZ6cXA=">Instagram</a></p>
+    <p>&copy; 2025 Pallav's Portfolio || All Rights Reserved.</p>
+</footer>
+
+<script src="main.js"></script>
+
+
+
+</body>
+</html>

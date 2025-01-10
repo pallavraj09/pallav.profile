@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contact-style.css">
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <p>If you would like to connect, feel free to reach out via the links below:</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/pallavvraj/" target="_blank">
+                LinkedIn
+            </a>
+            <br>
+            <a href="https://www.instagram.com/pallavv__/" target="_blank">
+                Instagram
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form" action="https://formspree.io/f/mldellnp" method="POST">
+            <!-- Step 1: Name and Email -->
+            <div id="step1">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+    
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+    
+                <button type="button" onclick="nextStep(1)">Next</button>
+            </div>
+    
+            <!-- Step 2: Message -->
+            <div id="step2" class="hidden">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+    
+                <button type="button" onclick="previousStep(2)">Back</button>
+                <button type="button" onclick="nextStep(2)">Next</button>
+            </div>
+    
+            <!-- Step 3: Social Handles (Optional) -->
+            <div id="step3" class="hidden">
+                <label for="handles">Social Handles (Optional)</label>
+                <textarea id="handles" name="handles" rows="3" placeholder="Your Social Media Handles"></textarea>
+    
+                <button type="button" onclick="previousStep(3)">Back</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+    
+
+    <footer>
+        <p>Follow me on: <a href="https://www.linkedin.com/in/pallavvraj/">LinkedIn</a> | <a href="https://www.instagram.com/pallavv__/profilecard/?igsh=enJmY2c1dWZ6cXA=">Instagram</a></p>
+        <p>&copy; 2025 Pallav's Portfolio || All Rights Reserved.</p>
+    </footer>
+
+    <script src="contact-main.js"></script>
+</body>
+</html>
